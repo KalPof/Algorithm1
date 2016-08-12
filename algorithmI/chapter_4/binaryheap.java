@@ -107,7 +107,7 @@ public class binaryheap<Key> implements Iterable<Key>
     until we reach a normal heap sorted tree
     */
     {
-        if(k > 1 && !less(k, k/2)) // this if is used to check if the child node has a greater key compared to the parental one (aka pq[k] > pq[k/2])
+        while(k > 1 && !less(k, k/2)) // this if is used to check if the child node has a greater key compared to the parental one (aka pq[k] > pq[k/2])
         {
            exchange(k, k/2);
            k = k/2; // this operation allows to walk throught the binary heap, setting k equals to the parental one, as described above
