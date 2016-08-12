@@ -104,7 +104,7 @@ public class binaryheap<Key> implements Iterable<Key>
     /* this method is used to deal with insertion errors of nodes into the heap
     in particoular this method fixs if there are nodes with keys larger that it's parental one exchanging it
     with the one above. If the key is still greater that the parental above it, we only keep doing exchanges
-    until we reach a normal heap sorted tree
+    until we reach a normal heap sorted tree. here's a bettere explanation http://algs4.cs.princeton.edu/24pq/images/swim.png
     */
     {
         while(k > 1 && !less(k, k/2)) // this if is used to check if the child node has a greater key compared to the parental one (aka pq[k] > pq[k/2])
@@ -117,7 +117,9 @@ public class binaryheap<Key> implements Iterable<Key>
     private void sink(int k)
     /*
     This method is used to change the position of 2 nodes, but in this case the parental one has a key lower than his child.
-    In this case we need to move the parental one down the tree. In that case, if k is the parental one, the child one has 2k 
+    In specific, the different between sink and swim is that sink fix the a parental node has a lower key compared to the 
+    2 childs below, so we need to move the current node down the tree, as here http://algs4.cs.princeton.edu/24pq/images/sink.png
+    If k is the parental one, the child one has 2k 
     */
     {
         while(2*k <= size) //we traved down the tree until k doesn't reach the last child node
