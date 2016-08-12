@@ -1,0 +1,3 @@
+questa directory viene banalmente utilizzata per il corso di princeton di algorithms & data structure I. 
+Avendolo già in gran parte terminato, è sufficiente che io carichi su il codice per sentirmi apposto con la
+coscienza

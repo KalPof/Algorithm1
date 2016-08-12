@@ -1,0 +1,1 @@
+I need to complete the stack and queue method, but are just the same (with different kind of pop methods) as the bag one, so gg
